@@ -1,0 +1,19 @@
+.card{
+    height: 65vh;
+    width: 580px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.text{
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid darkblue;
+    height: 40px;
+    width: 355px;
+        
+}
+.text:hover{
+    cursor: pointer;
+    color:rgb(31, 31, 97);
+}

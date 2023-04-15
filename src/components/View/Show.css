@@ -1,0 +1,46 @@
+.card-containers{
+    height: 400px;
+    width: 350px;
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 95px;
+    -webkit-box-shadow: 21px 14px 16px 0px rgba(240,166,240,0.79);
+    -moz-box-shadow: 21px 14px 16px 0px rgba(240,166,240,0.79);
+    box-shadow: 21px 14px 16px 0px rgba(240,166,240,0.79);
+    text-align: center;
+    border-radius: 35px;
+    }
+    .equipment-img{
+    width: 350px;
+    height:300px;
+    }
+    .header{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background: -webkit-linear-gradient(#352ac8,#c113bb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .card-text{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background: -webkit-linear-gradient( #000000,#c113bb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+    
+    .cart-btn{
+      font-size: 14px;
+      padding: 8px;
+      margin-top: 8px;
+      border: none;
+      background-color: #fdadfb;
+      border-radius: 15px;
+      color:#000000;
+    }
+    .cart-btn:hover{
+    font-weight: bold;
+      color:#fdadfb;
+      background-color:#5b0658;
+      border: 1px solid #5b0658;
+    }
+    

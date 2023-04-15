@@ -1,0 +1,89 @@
+.body{
+    width: 100%;
+    height: 100%;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+   background: #222;
+}
+.wrapper{
+    margin-left:20px;
+    margin-top: 30px;
+display: flex;
+flex-direction: column;
+
+    
+    width:70%;
+}
+.imgcard{
+    width:280px;
+    height: 360px;
+    padding: 2rem 1rem;
+background:#222;
+position: relative;
+display: flex;
+align-items: flex-end;
+box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+transition: 0.5s ease-in-out;
+} 
+.imgcard:hover{
+    transform: translateY(20px);
+}
+.imgcard:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+width: 100%;
+height:100%;
+background:linear-gradient(to bottom,rgba(253, 255, 255, 0.5),rgb(94, 90, 90));
+Z-index:2;
+transition: 0.5s all;
+opacity: 0;
+}
+.imgcard:hover:before{
+opacity: 1;
+}
+
+.imgcard img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+.imgcard .info{
+    position: relative;
+    Z-index:3;
+    opacity: 0;
+    color:white;
+    transform: translateY(30px);
+    transition: 0.5s all;  
+}
+.imgcard:hover .info{
+opacity: 1;
+transform: translateY(0px);
+}
+.imgcard.info h1{
+    margin: 0;
+}
+.imgcard .info p{
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+.imgcard.info .btn{
+    text-decoration: none;
+    padding: 0.5rem 1 rem;
+    background: #000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.imgcard .info .btn:hover{
+box-shadow: 0px 7px 10px rgba(0,0,0,0.8);
+}
