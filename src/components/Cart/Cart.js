@@ -1,18 +1,17 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom';
-import './Cart.css'
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import './Cart.css';
 import { FormControl, Grid, InputLabel, MenuItem, Select } from '@mui/material';
 
 const Cart = () => {
+  const navigate=useNavigate()
  const [permonth,setPerMonth]=useState(300)
 
   const [month, setMonth] = useState('')
   const handleChange = (event) => {
     setMonth(event.target.value);
   };
-
-
   const params = useParams();
   console.log(params);
   const [obj,setObj] = useState({});
@@ -30,6 +29,15 @@ setObj(object.data);
       console.log(error);
     }
   }
+  // payment redirect function
+  const buttonMove=(obj)=>{
+    if(obj === 'Available'){
+console.log('success');
+return navigate('/payment')
+    }
+      return navigate('/portal/cart/:id')
+    }
+
     return (
     <div className='body'>
           <div className='wrapper'>
@@ -51,14 +59,14 @@ setObj(object.data);
     onChange={handleChange}
     className='input-lable'
   >
-    <MenuItem value={2}>Two</MenuItem>
-    <MenuItem value={6}>Six</MenuItem>
-    <MenuItem value={12}>Twelve</MenuItem>
+    <MenuItem value={2}>2</MenuItem>
+    <MenuItem value={6}>6</MenuItem>
+    <MenuItem value={12}>12</MenuItem>
   </Select>
 </FormControl>
-<Link to='/payment'>
-      <button className='btn'>BOOK NOW</button>
-      </Link>
+{/* <Link to='/payment'> */}
+      <button className='btn' onClick={()=>buttonMove(obj.Availability)}>BOOK NOW</button>
+      {/* </Link> */}
 </div>
       </div>
       </div> 
@@ -70,30 +78,3 @@ setObj(object.data);
 export default Cart
 
 
-// Availability
-// : 
-// "5 days"
-// Brand
-// : 
-// "Lifelong"
-// Colour
-// : 
-// "Black"
-// ItemWeight
-// : 
-// "2000 Grams"
-// Material
-// : 
-// "PVC"
-// Maximum_Weight
-// : 
-// "2 Kg"
-// RentperHour
-// : 
-// 3500
-// img
-// : 
-// "https://freepngimg.com/thumb/gym_equipments/41376-6-workout-machine-image-free-download-image.png"
-// _id
-// : 
-// "642c09fef0dfd60463194368"

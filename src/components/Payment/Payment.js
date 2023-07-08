@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Payment.css';
 const Payment = () => {
   const [permonth,setPerMonth]=useState()
+  const [popup,setPopup] =useState(false)
 
   // handleAddToCart=()=>{
   //   // setPerMonth(RentperHour *)
@@ -39,20 +40,31 @@ const Payment = () => {
       }
     
     }
+
+    // popup
+    
+  const handleClickOPen=()=>{
+  setPopup(!popup)
+  } 
   return (
     <div className='card-wrap'> 
          <div className='content-wrap'>
          <h2>Razorpay Payment Integration Using React</h2>
     <br></br>
    <span className='link'>Welcome to RazorPay Payment</span>
+   {popup ?
     <form className='form-payment'>
       <div className='form'>
+     
     <input type="text" placeholder='Enter the Amount' value={amount} onChange={(e)=>setamount(e.target.value)}/>
    
     <button onClick={handleSubmit}>Submit</button>
+    
     </div>
     </form>
+    :""}
     </div>
+ 
     </div>
   )
 }

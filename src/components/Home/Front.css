@@ -3,6 +3,7 @@
   margin-left: 50px;
   height: 100%;
   text-align: center;
+  /* background-color:rgb(255, 196, 196); */
 }
 /* .btn-testimonial{
   width: 120px;
@@ -17,7 +18,7 @@
   border-radius: 50px;
 } */
 .test-div{
-  margin: 100px;
+  margin: 50px;
 }
 
 

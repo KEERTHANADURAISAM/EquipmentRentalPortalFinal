@@ -1,5 +1,5 @@
-import {useEffect, useState} from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {useState} from 'react';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Testimonial from './components/Testimonial/Testimonial';
 import AdminPortal from './components/Admin/AdminPortal';
 import AddEquipment from './components/Equipment/AddEquipment';
@@ -13,8 +13,6 @@ import Show from './components/View/Show';
 import Payment from './components/Payment/Payment';
 
 
-
-
 function App() {
  const [add,setAddcart]=useState(0)
   return (
@@ -25,13 +23,12 @@ function App() {
         <Route path='/portal'  element={<Portal add={add}/>}>
             <Route path='home' element={<FrontPage/>}/> 
             <Route path="show" element={<Show add={add} setAddcart={setAddcart}/>}/>
-            
-             <Route path='contact'  element={<Contact/>}/>
+            <Route path='contact'  element={<Contact/>}/>
             <Route path='cart/:id'  element={<Cart/>}/>
             <Route path='testimonial'  element={<Testimonial/>}/>     
         </Route>
         <Route path='payment' element={<Payment/>}/>
-            <Route path='/admin' element={<AdminPortal/>}>
+                 <Route path='/admin' element={<AdminPortal/>}>
                  <Route path='contactview'  element={<ContactView/>}/>
                  <Route path='addequipment'  element={<AddEquipment/>}/>
             </Route>

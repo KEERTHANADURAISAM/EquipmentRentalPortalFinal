@@ -1,0 +1,13 @@
+.card-containers-one{
+
+display: inline-block;
+margin-top: 25px;
+margin-left: 95px;  
+text-align: justify;
+padding: 5px;
+
+
+    }
+    .foo-text{
+        margin-top: 55px;
+    }
